@@ -20,7 +20,7 @@ module Scryfall
       end
     end
     
-    def post(path = "", body)
+    def post(path = "", body, **args)
       res = HTTP.post(mount_uri(path), body: body.to_json)
 
       if args.has_key?(:to_struct) && args[:to_struct] == true
