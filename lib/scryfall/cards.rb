@@ -34,5 +34,9 @@ module Scryfall
     def self.with_id(id, **args)
       api.get "/cards/#{id}", {}, **args
     end
+    
+    def self.collection(collection, **args)
+      api.get '/cards/collection', collection, **args
+    end
   end
 end
