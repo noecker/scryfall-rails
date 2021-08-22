@@ -36,7 +36,7 @@ module Scryfall
     end    
     
     def self.collection(collection, **args)
-      api.post '/cards/collection', **collection, **args
+      api.post '/cards/collection', collection, **args
     end
   end
 end
